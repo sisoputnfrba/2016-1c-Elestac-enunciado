@@ -10,5 +10,5 @@
 * [Anexo I - Bloque de Control del Programa (PCB)](anexo_i_-_bloque_de_control_del_programa_pcb.md)
 * [Anexo II – Especificación del Lenguaje AnSISOP](anexo_ii__especificacion_del_lenguaje_ansisop.md)
 * [Anexo III - Primitivas de AnSISOP](anexo_iii_-_primitivas_de_ansisop.md)
-* Descripción de las entregas
+* [Descripción de las entregas](descripcion_de_las_entregas.md)
 
