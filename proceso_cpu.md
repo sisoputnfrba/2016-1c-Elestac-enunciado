@@ -17,7 +17,7 @@ Luego de recibir de la UMC la instrucción `a = b + 3`, el parser la interpretar
 3. `obtener_direccion('a')`: como 1), pero para saber dónde guardar el resultado. Por ejemplo, Pag: 4, Offset: 0, Size: 4.
 4. `almacenar(Pag: 4, Offset: 0, Size: 4, 11)`: almacenará en la UMC el resultado de la suma `(9 + 3 = 11)`.
 
-El ingreso a funciones o procedimientos requiere que se asienten datos como el punto de retorno o las variables locales en el índice de Stack - Ver detalle en el [Anexo IV - Stack](anexo-iv-stack.md)
+El ingreso a funciones o procedimientos requiere que se asienten datos como el punto de retorno o las variables locales en el índice de Stack - Ver detalle en el Anexo IV - Stack
 
 ## Hot plug
 
