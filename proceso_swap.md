@@ -16,11 +16,11 @@ Ante un pedido de lectura de página realizado por el **Administrador de Memoria
 
 | Nombre de Campo | Valor de Ejemplo |
 |-----------------|------------------|
-| `Puerto_Escucha` | 6000 |
-| `Nombre_Swap` | `swap.data` |
-| `Cantidad_Paginas` | 512 |
-| `Tamaño_Pagina` | 256[^13] |
-| `Retardo_Compactacion` | 60000 |
+| `PUERTO_ESCUCHA` | 6000 |
+| `NOMBRE_SWAP` | `swap.data` |
+| `CANTIDAD_PAGINAS` | 512 |
+| `TAMANIO_PAGINA` | 256[^13] |
+| `RETARDO_COMPACTACION` | 60000 |
 
 [^9] Se recomienda al alumno investigar sobre la utilización del comando `dd` para crear los archivos
 
