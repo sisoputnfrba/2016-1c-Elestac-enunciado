@@ -57,9 +57,9 @@ Existen cinco Operaciones Privilegiadas:
 * `signal [identificador de semáforo]`
 * `entrada_salida [identificador de dispositivo] [unidades de tiempo a utilizar]`
 
-En el código AnSISOP, los identificadores de las variables compartidas, para diferenciarlas de las variables normales, comenzarán con el caracter signo de admiración (!), seguido del identificador de una cadena de texto, por ejemplo: !mivariable, !var123. Las variables compartidas existentes en el sistema son definidas por archivo de configuración y automáticamente inicializadas en cero.
+En el código AnSISOP, los identificadores de las variables compartidas, para diferenciarlas de las variables normales, comenzarán con el caracter signo de admiración (!), seguido del identificador de una cadena de texto, por ejemplo: `!mivariable`, `!var123`. Las variables compartidas existentes en el sistema son definidas por archivo de configuración y automáticamente inicializadas en cero.
 
-Los semáforos estarán definidos por archivo de configuración con un identificador alfanumérico y un valor inicial, por ejemplo: Semaforo1 o cantidadImpresoras. Se crearán al iniciar el proceso Núcleo, y se considera una excepción abortiva intentar acceder a una variable compartida o semáforo inexistente, por lo que no está dentro del alcance de la evaluación.
+Los semáforos estarán definidos por archivo de configuración con un identificador alfanumérico y un valor inicial, por ejemplo: `Semaforo1` o `cantidadImpresoras`. Se crearán al iniciar el proceso Núcleo, y se considera una excepción abortiva intentar acceder a una variable compartida o semáforo inexistente, por lo que no está dentro del alcance de la evaluación.
 
 ## Dispositivos de entrada/salida y colas de espera
 
@@ -67,9 +67,9 @@ Por archivo de configuración se definirá qué dispositivos de entrada/salida h
 
 Como se observa en el Anexo, desde el lenguaje AnSISOP se puede solicitar que un programa realice entrada/salida en un dispositivo, indicando su identificador y la cantidad de unidades a ejecutar, por ejemplo: `io Disco 10`.
 
-El primer parámetro (Disco) corresponde al identificador del dispositivo de entrada/salida a utilizar. Los dispositivos del sistema son independientes entre sí, y cada uno puede ser utilizado por una única solicitud de entrada/salida a la vez, por lo que el programa de ejemplo deberá esperar a que terminen todas las peticiones previas de entrada/salida sobre el Disco antes de ejecutar la suya, pero podrá ejecutarse en paralelo con una petición a la Impresora.
+El primer parámetro (`Disco`) corresponde al identificador del dispositivo de entrada/salida a utilizar. Los dispositivos del sistema son independientes entre sí, y cada uno puede ser utilizado por una única solicitud de entrada/salida a la vez, por lo que el programa de ejemplo deberá esperar a que terminen todas las peticiones previas de entrada/salida sobre el `Disco` antes de ejecutar la suya, pero podrá ejecutarse en paralelo con una petición a la `Impresora`.
 
-El segundo parámetro (10) es la cantidad de operaciones de entrada/salida que deben realizarse. A efectos del Trabajo Práctico, “realizar una entrada/salida” sólo significará esperar la cantidad de tiempo indicada por la cantidad de operaciones a realizar y el tiempo por unidad del dispositivo correspondiente. Por ejemplo, si el Disco tiene configurado un retardo de 5ms, para completar la operación de 10 unidades se deberá esperar[^5] 50ms, durante los que el dispositivo no podrá realizar ninguna otra operación de entrada/salida.
+El segundo parámetro (`10`) es la cantidad de operaciones de entrada/salida que deben realizarse. A efectos del Trabajo Práctico, “realizar una entrada/salida” sólo significará esperar la cantidad de tiempo indicada por la cantidad de operaciones a realizar y el tiempo por unidad del dispositivo correspondiente. Por ejemplo, si el `Disco` tiene configurado un retardo de 5ms, para completar la operación de 10 unidades se deberá esperar[^5] 50ms, durante los que el dispositivo no podrá realizar ninguna otra operación de entrada/salida.
 
 ## Archivo de Configuración
 
