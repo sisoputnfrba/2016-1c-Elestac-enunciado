@@ -12,7 +12,7 @@ El parser podrá obtenerse desde https://github.com/sisoputnfrba/ansisop-parser
 1. `obtenerValorCompartida`
 1. `asignarValorCompartida`
 1. `irAlLabel`
-1. `llamarFuncion`
+1. `llamarConRetorno`
 1. `retornar`
 1. `imprimir`
 1. `imprimirTexto`
@@ -80,7 +80,7 @@ Devuelve el número de la primer instrucción ejecutable de etiqueta y -1 en cas
 t_puntero_instruccion irAlLabel(t_nombre_etiqueta etiqueta)
 ```
 
-### 8. `llamarFuncion`
+### 8. `llamarConRetorno`
 
 Preserva el contexto de ejecución actual para poder retornar luego al mismo, junto con la posición de la variable entregada por `donde_retornar`. Modifica las estructuras correspondientes para mostrar un nuevo contexto vacío. Retorna el número de instrucción a ejecutar.
 
@@ -89,8 +89,7 @@ Los parámetros serán definidos luego de esta instrucción de la misma manera q
 No se pretende que se pueda retornar a una variable compartida. Sí a un parámetro o variable local.
 
 ```
-t_puntero_instruccion llamarFuncion(t_nombre_etiqueta etiqueta, t_posicion donde_retornar,
-t_puntero_instruccion linea_en_ejecuccion)
+void llamarConRetorno(t_nombre_etiqueta etiqueta, t_puntero donde_retornar)
 ```
 
 ### 9. `retornar`
