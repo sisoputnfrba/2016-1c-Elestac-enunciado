@@ -10,7 +10,7 @@ Para permitir una mejor distribución de las tareas y orientar al alumno en el p
 - Familiarizarse con Linux y su consola, el entorno de desarrollo y el repositorio
 - Aplicar las Commons Libraries, principalmente las funciones para listas, archivos de configuración y logs
 - Implementar el Parser de AnSISOP en un programa de ejemplo
-- Desarrollar un modelo de intérprete de comandos para el Proceso Consola y para la UMC
+- Desarrollar un modelo de intérprete de comandos para la consola de la UMC
 - Desarrollar un binario que sirva como intérprete de un script en Linux
 - Realizar la estructura básica de comunicación entre los programas
 
