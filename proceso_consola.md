@@ -4,7 +4,7 @@ El Proceso Consola es un proceso simple que permite enviar a ejecutar Programas 
 
 ## Arquitectura del Proceso Consola
 
-La Consola es un simple intérprete de comandos que permitirá al usuario del sistema iniciar nuevos Programas AnSISOP y visualizar los mensajes que éste imprima.
+La Consola es un intérprete de scripts AnSISOP, cuya única responsabilidad es enviar el código del programa al Núcleo y mostrar por pantalla los mensajes que el Núcleo le indique imprimir.
 
 Al iniciar, leerá su archivo de configuración, se conectará mediante sockets[^1] al Proceso Núcleo y, luego de un intercambio de mensajes inicial (handshake) , enviará el código del Programa AnSISOP al Núcleo. A partir de ese momento, el proceso quedará a la espera de mensajes del Núcleo correspondientes a las sentencias `imprimir` e `imprimirTexto`, con los valores que deberá mostrar en pantalla.
 
