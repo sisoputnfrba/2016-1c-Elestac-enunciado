@@ -4,7 +4,7 @@ El proceso Núcleo es el proceso principal del sistema. Recibirá los Programa
 
 ## Arquitectura del Proceso Núcleo
 
-El proceso Núcleo al ser iniciado se conectará con el Proceso Unidad de Memoria Central (UMC) y quedará a la espera de conexiones por parte de Procesos CPU o Procesos Consola.
+El proceso Núcleo al ser iniciado se conectará con el Proceso Unidad de Memoria Central (UMC), obtendrá el tamaño de página, y quedará a la espera de conexiones por parte de Procesos CPU o Procesos Consola.
 
 Al contar con al menos un Proceso CPU comenzará a planificar los diversos Programas AnSISOP en función del algoritmo de planificación.
 
@@ -86,6 +86,7 @@ Al iniciar, el Proceso Núcleo deberá leer los siguientes parámetros de un arc
 | `IO_IDS` | [array: alfanumérico] | Identificador de cada dispositivo de entrada/salida |
 | `IO_SLEEP` | [array: numérico] | Retardo en milisegundos de cada unidad de operación de entrada/salida de cada dispositivo definido en IO_IDS, según su posición |
 | `SHARED_VARS` | [array: alfanumérico] | Identificador de cada variable compartida |
+| `STACK_SIZE` | [numérico] | Tamaño en páginas del Stack |
 
 ### Ejemplo de Archivo de Configuración
 
@@ -99,6 +100,7 @@ IO_SLEEP=[1000, 2000, 1000]
 SEM_ID=[SEM1, SEM2, SEM3]
 SEM_INIT=[0, 0, 5]
 SHARED_VARS=[!Global, !UnaVar, !tiempo3]
+STACK_SIZE=2
 ```
 
 Como se observa en el ejemplo el `SEM3` es inicializado con valor 5 y la `Impresora` tiene un retardo de 2000ms. Las variables compartidas `!Global`, `!Unavar`, y `!tiempo3` se inicializan en cero.
