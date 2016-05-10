@@ -4,9 +4,9 @@ Este proceso es uno de los más importantes del trabajo ya que es el encargado d
 
 Estará en permanente contacto con el Proceso UMC, tanto para obtener información del Programa en ejecución, como para actualizar las estructuras requeridas luego de ejecutar una operación.
 
-Al iniciar, se conectará al proceso Núcleo y quedará a la espera de que este le envíe el PCB de un Programa AnSISOP para ejecutarlo.
+Al iniciar, se conectará a la UMC y obtendrá el tamaño de página a utilizar. Además se conectará al proceso Núcleo y quedará a la espera de que este le envíe el PCB de un Programa AnSISOP para ejecutarlo.
 
-Incrementará el valor del registro Program Counter del PCB y utilizará el índice de código para solicitar a la UMC la próxima sentencia a ejecutar. Al recibirla, la parseará, ejecutará las operaciones requeridas, actualizará los valores del Programa en la UMC, actualizará el Program Counter en el PCB y notificará al Núcleo que concluyó un **quantum**[^14].
+Incrementará el valor del registro Program Counter del PCB y utilizará el índice de código para solicitar a la UMC la(s) página(s) donde se encuentre la próxima sentencia a ejecutar. Al recibirla(s), extraerá la instrucción, la parseará, ejecutará las operaciones requeridas, actualizará los valores del Programa en la UMC, actualizará el Program Counter en el PCB y notificará al Núcleo que concluyó un **quantum**[^14].
 
 ### Ejemplo
 
