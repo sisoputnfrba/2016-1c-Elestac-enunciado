@@ -16,7 +16,7 @@ A la UMC se conectarán, mediante sockets, el proceso Núcleo y los diversos CPU
 
 ## Cache TLB
 
-La UMC utilizará una estructura en memoria que emulará una única cache TLB, con las columnas que sean necesarias para su buen funcionamiento. Su cantidad de entradas será configurable, y no variará durante la ejecución de este proceso. También se deberá poder deshabilitar el uso de esta caché con una opción en el archivo de configuración.
+La UMC utilizará una estructura en memoria que emulará una única cache TLB, con las columnas que sean necesarias para su buen funcionamiento. Su cantidad de entradas será configurable, y no variará durante la ejecución de este proceso. También se deberá poder deshabilitar el uso de esta caché con una opción en el archivo de configuración. El algoritmo de reemplazo a utilizar aquí será LRU. Ante un cambio de proceso, se realizará una limpieza (`flush`) en las entradas que correspondan.
 
 ## Operaciones de la UMC
 
@@ -52,6 +52,9 @@ También soporta algunas operaciones que simplifican el desarrollo del trabajo p
 * Handshake: [Tipo: Núcleo/CPU]
 * Cambio de proceso activo: [Identificador del Programa]
 
+### Algoritmos de reemplazo
+Cuando un Programa AnSISOP necesite acceder a una página, es posible que esta no se encuentre en memoria principal. Para solucionar esta situación, se deberán implementar los algoritmos Clock y Clock Modificado, siendo ambos configurables.
+
 ## Consola
 
 El Proceso UMC, al iniciar, quedará a la espera de comandos enviados por teclado permitiendo al menos las siguientes funcionalidades. El diseño de la misma y la sintaxis de los comandos queda a criterio del equipo.
@@ -76,6 +79,7 @@ Al iniciar, el Proceso UMC deberá leer los siguientes parámetros de un archivo
 | `MARCOS` | [numérico] | Cantidad de marcos disponibles en el sistema |
 | `MARCO_SIZE` | [numérico] | Valor en bytes del tamaño de marco del sistema |
 | `MARCO_X_PROC` | [numérico] | Cantidad máxima de marcos asignable a cada Programa AnSISOP |
+| `ALGORITMO` | [alfanumérico] | Algoritmo de reemplazo de páginas |
 | `ENTRADAS_TLB` | [numérico] | Cantidad disponible de entradas en la TLB. 0 = Deshabilitada |
 | `RETARDO` | [numérico] | Cantidad de milisegundos que el sistema debe esperar antes de responder una solicitud |
 
