@@ -4,7 +4,7 @@ El proceso Núcleo es el proceso principal del sistema. Recibirá los Programa
 
 ## Arquitectura del Proceso Núcleo
 
-El proceso Núcleo al ser iniciado se conectará con el Proceso Unidad de Memoria Central (UMC), obtendrá el tamaño de pagina, y quedará a la espera de conexiones por parte de Procesos CPU o Procesos Consola.
+El proceso Núcleo al ser iniciado se conectará con el Proceso Unidad de Memoria Central (UMC), obtendrá el tamaño de página, y quedará a la espera de conexiones por parte de Procesos CPU o Procesos Consola.
 
 Al contar con al menos un Proceso CPU comenzará a planificar los diversos Programas AnSISOP en función del algoritmo de planificación.
 
@@ -86,7 +86,7 @@ Al iniciar, el Proceso Núcleo deberá leer los siguientes parámetros de un arc
 | `IO_IDS` | [array: alfanumérico] | Identificador de cada dispositivo de entrada/salida |
 | `IO_SLEEP` | [array: numérico] | Retardo en milisegundos de cada unidad de operación de entrada/salida de cada dispositivo definido en IO_IDS, según su posición |
 | `SHARED_VARS` | [array: alfanumérico] | Identificador de cada variable compartida |
-| `STACK_SIZE` | [array: alfanumérico] | Tamaño en páginas del Stack |
+| `STACK_SIZE` | [numérico] | Tamaño en páginas del Stack |
 
 ### Ejemplo de Archivo de Configuración
 
