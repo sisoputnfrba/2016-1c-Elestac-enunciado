@@ -58,7 +58,8 @@ Para permitir una mejor distribución de las tareas y orientar al alumno en el p
 **Fecha:** 11 de Junio
 
 **Objetivos:**
-- Implementar la interfaz de mensajes de la UMC y su correspondiente validación
+- Implementar la interfaz de mensajes de la UMC y su correspondiente validación.
+- Implementar el algoritmo Clock en la UMC y LRU para su TLB.
 - Las operaciones AnSISOP deben impactar en las estructuras de la UMC y del proceso Swap cuando corresponda.
 - Desarrollar los hilos de entrada/salida
 - El núcleo debe poder recibir nuevos Programas AnSISOP desde diversas consolas y enviar los PCB READY a ejecutar a los distintos CPUs disponibles.
@@ -70,7 +71,7 @@ Para permitir una mejor distribución de las tareas y orientar al alumno en el p
 
 **Distribución recomendada:**
 
-**Núcleo**: 1 persona. **UMC**: 1.5 persona. **Swap**: 0.5 persona. **CPU**: 2 personas.
+**Núcleo**: 1 persona. **UMC**: 2 personas. **Swap**: 0.5 persona. **CPU**: 1.5 personas.
 
 ## Entrega Final
 
@@ -78,12 +79,13 @@ Para permitir una mejor distribución de las tareas y orientar al alumno en el p
 
 **Objetivos:**
 - Finalizar las primitivas del CPU y permitir la ejecución de programas AnSISOP en su especificación completa
+- Implementar el algoritmo Clock Modificado en la UMC
 - Dar soporte a las instrucciones de semáforo con su correspondiente hilo de bloqueo y a las variables de memoria compartida
 - Realizar pruebas de stress sobre el sistema, ejecutando varios Programas AnSISOP de manera simultánea e interrumpiendo su ejecución 
 
 **Distribución recomendada:**
 
-**CPU**: 1.5 persona. **Núcleo**: 1 persona. **Stress Test y debugging**: 2.5 personas.
+**CPU**: 1.5 persona. **Núcleo**: 1 persona. **UMC**: 0.5 persona **Stress Test y debugging**: 2 personas.
 
 **Lectura recomendada:**
 - Test del trabajo práctico provistos por la cátedra
