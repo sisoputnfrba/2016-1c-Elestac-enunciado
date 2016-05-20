@@ -1,6 +1,6 @@
 # Proceso Swap
 
-Este proceso simulará el administrador de memoria virtual de un sistema operativo. Será el encargado de administrar la memoria virtual del sistema, para ello, al iniciarse, creará un archivo de tamaño <u>configurable</u> (en bytes), el cual representará nuestra _partición de swap_, y quedará a la espera de la conexión del **proceso UMC**.
+Este proceso simulará el administrador de memoria virtual de un sistema operativo. Será el encargado de administrar la memoria virtual del sistema, para ello, al iniciarse, creará un archivo de tamaño <u>configurable</u> (en páginas), el cual representará nuestra _partición de swap_, y quedará a la espera de la conexión del **proceso UMC**.
 
 Inicialmente el archivo de swap deberá ser rellenado con el caracter `\0`, a fines de inicializar la partición[^9]. El tamaño de las páginas escritas en swap es <u>configurable</u>[^10], así como también el nombre de este archivo.
 
