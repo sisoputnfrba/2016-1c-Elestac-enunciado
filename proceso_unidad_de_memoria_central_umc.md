@@ -2,7 +2,7 @@
 
 El Proceso UMC[^7] es el responsable en el sistema de brindar a los Programas espacio en memoria para que estos realicen sus operaciones. Simulará un mecanismo de paginación por demanda, utilizando una TLB y un espacio de swap. Para esto utilizará una serie de estructuras administrativas internas que deberá crear y mantener.
 
-Controlará la cantidad de marcos otorgados a cada proceso, siendo este un valor configurable, con asignación fija y reemplazo local. La asignación de frames a un determinado Programa se hará efectiva sólo cuando este lo necesite, pudiendo nunca llegar al límite mencionado. 
+Controlará la cantidad de marcos otorgados a cada proceso, siendo este un valor configurable, con asignación fija y reemplazo local. La asignación de frames a un determinado Programa se hará efectiva sólo cuando este lo necesite, pudiendo nunca llegar al límite mencionado.
 
 ## Arquitectura de la UMC
 
@@ -23,9 +23,9 @@ La UMC utilizará una estructura en memoria que emulará una única cache TLB, c
 El Proceso UMC, simulando aspectos de un controlador de memoria real, maneja una interfaz reducida, que <u>no puede ser ampliada</u>.
 
 ### Inicializar programa
-Parámetros: [Identificador del Programa] [Cantidad de Páginas requeridas] [Contenido de Páginas]
+Parámetros: [Identificador del Programa] [Cantidad de Páginas totales requeridas] [Código del Programa]
 
-Cuando el proceso Núcleo comunique el inicio de un nuevo Programa AnSISOP, se crearán las estructuras necesarias para administrarlo correctamente. Para ello, UMC recibirá de este último un Identificador de programa, la cantidad de páginas requeridas, y su contenido. Luego, deberá informar de esta situación al Proceso Swap, junto con la cantidad de páginas de datos a utilizar y su contenido, para que este asigne el espacio necesario en su partición y almacene la información correspondiente. Notar que las páginas recibidas por la UMC no serán cargadas en memoria principal hasta que sea requerido, respetando el principio de paginación bajo demanda.
+Cuando el proceso Núcleo comunique el inicio de un nuevo Programa AnSISOP, se crearán las estructuras necesarias para administrarlo correctamente. Para ello, UMC recibirá de este último un Identificador de programa, la cantidad de páginas totales requeridas, y el código del Programa. Luego, deberá informar de esta situación al Proceso Swap, reservando la cantidad de páginas a usar, y escribiendo las páginas de código. Notar que las páginas recibidas por la UMC no serán cargadas en memoria principal hasta que sea requerido, respetando el principio de paginación bajo demanda.
 
 ### Solicitar bytes de una página
 Parámetros: [#página], [offset] y [tamaño]
@@ -69,7 +69,7 @@ El Proceso UMC, al iniciar, quedará a la espera de comandos enviados por teclad
 
 ## Archivo de Configuración
 
-Al iniciar, el Proceso UMC deberá leer los siguientes parámetros de un archivo de configuración, el cual podrá ser parametrizable como primer argumento del programa. 
+Al iniciar, el Proceso UMC deberá leer los siguientes parámetros de un archivo de configuración, el cual podrá ser parametrizable como primer argumento del programa.
 
 | Parámetro | Tipo de dato | Descripción |
 |-----------|--------------|-------------|

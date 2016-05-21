@@ -20,8 +20,9 @@ El Núcleo creará la estructura PCB con al menos los siguientes campos[^3]:
 * Un identificador único (PID)
 * Program Counter (PC)
 * Posición del Stack (SP)
+* Índice de Stack
 
-A partir de esta información, el Núcleo deberá inicializar una nueva estructura Stack, solicitarle a la UMC páginas para almacenar el código del programa y páginas para almacenar el stack, y almacenar dichas estructuras.
+A partir de esta información, el Núcleo deberá solicitarle a la UMC lás páginas necesarias para almacenar el código del programa y el stack. Para simular el comportamiento de un sistema real, también le enviará el código completo del Programa, que la UMC deberá almacenar página por página en el Swap. **La UMC no almacenará las páginas de código inicialmente**: sólo las almacenará el Swap, y se cargarán en UMC cuando ocurran los fallos de página correspondientes intentando leer el código.
 
 Si no se pudiera obtener espacio suficiente para algunas de las estructuras necesarias del proceso, entonces se le rechazará el acceso al sistema, informándose oportunamente en el proceso Consola correspondiente a ese Programa.
 
