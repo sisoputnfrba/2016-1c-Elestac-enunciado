@@ -23,9 +23,9 @@ La UMC utilizará una estructura en memoria que emulará una única cache TLB, c
 El Proceso UMC, simulando aspectos de un controlador de memoria real, maneja una interfaz reducida, que <u>no puede ser ampliada</u>.
 
 ### Inicializar programa
-Parámetros: [Identificador del Programa] [Páginas requeridas]
+Parámetros: [Identificador del Programa] [Cantidad de Páginas requeridas] [Contenido de Páginas]
 
-Cuando el proceso Núcleo comunique el inicio de un nuevo Programa AnSISOP, se crearán las estructuras necesarias para administrarlo correctamente. Además, deberá informar tal situación al Proceso Swap, junto con la cantidad de páginas de datos a utilizar, para que este asigne el espacio necesario en su partición.
+Cuando el proceso Núcleo comunique el inicio de un nuevo Programa AnSISOP, se crearán las estructuras necesarias para administrarlo correctamente. Para ello, UMC recibirá de este último un Identificador de programa, la cantidad de páginas requeridas, y su contenido. Luego, deberá informar de esta situación al Proceso Swap, junto con la cantidad de páginas de datos a utilizar y su contenido, para que este asigne el espacio necesario en su partición y almacene la información correspondiente. Notar que las páginas recibidas por la UMC no serán cargadas en memoria principal hasta que sea requerido, respetando el principio de paginación bajo demanda.
 
 ### Solicitar bytes de una página
 Parámetros: [#página], [offset] y [tamaño]

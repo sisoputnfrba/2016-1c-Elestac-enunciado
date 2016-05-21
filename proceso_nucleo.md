@@ -21,7 +21,7 @@ El Núcleo creará la estructura PCB con al menos los siguientes campos[^3]:
 * Program Counter (PC)
 * Posición del Stack (SP)
 
-A partir de esta información, el Núcleo deberá inicializar una nueva estructura Stack, solicitarle a la UMC páginas para almacenar el código del programa y páginas para almacenar el stack, y luego almacenar dichas estructuras.
+A partir de esta información, el Núcleo deberá inicializar una nueva estructura Stack, solicitarle a la UMC páginas para almacenar el código del programa y páginas para almacenar el stack, y almacenar dichas estructuras.
 
 Si no se pudiera obtener espacio suficiente para algunas de las estructuras necesarias del proceso, entonces se le rechazará el acceso al sistema, informándose oportunamente en el proceso Consola correspondiente a ese Programa.
 
