@@ -98,7 +98,7 @@ Aquí se debe dejar registrado en una nueva posición de esta estructura que, al
 
 | `pos` | `args` | `vars` | `retPos` | `retVar` |
 |-------|--------|--------|----------|----------|
-| 0 | &nbsp; | ID: (Pag, Off, Size)<br />`a: (0, 0, 4)`<br />`b: (0, 4, 4)` | &nbsp; | &nbsp; |
+| 0 | &nbsp; | ID: (Pag, Off, Size)<br />`a: (0, 0, 4)`<br />`g: (0, 4, 4)` | &nbsp; | &nbsp; |
 | 1 | (Pag, Off, Size)<br />`(0, 8, 4)` | ID: (Pag, Off, Size)<br />`f: (0, 12, 4)` | 3 | (Pag, Off, Size)<br />`(0, 4, 4)` |
 
 La dirección de retorno es la línea 3, y la dirección de la variable de retorno coincide con la de la variable `g`.
