@@ -88,7 +88,7 @@ Al iniciar el programa, se crea la el siguiente registro en la estructura de sta
 
 | `pos` | `args` | `vars` | `retPos` | `retVar` |
 |-------|--------|--------|----------|----------|
-| 0 | &nbsp; | ID: (Pag, Off, Size)<br />`a: (0, 0, 4)`<br />`b: (0, 4, 4)` | &nbsp; | &nbsp; |
+| 0 | &nbsp; | ID: (Pag, Off, Size)<br />`a: (0, 0, 4)`<br />`g: (0, 4, 4)` | &nbsp; | &nbsp; |
 
 Como se puede observar, la función principal no tiene argumentos, ni debe retornar por lo que esos campos están vacíos.
 
