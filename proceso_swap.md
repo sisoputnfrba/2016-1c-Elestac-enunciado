@@ -20,7 +20,10 @@ Ante un pedido de lectura de página realizado por el **Administrador de Memoria
 | `NOMBRE_SWAP` | `swap.data` |
 | `CANTIDAD_PAGINAS` | 512 |
 | `TAMANIO_PAGINA` | 256[^13] |
+| `RETARDO_ACCESO` | 600 | 
 | `RETARDO_COMPACTACION` | 60000 |
+
+El `RETARDO_ACCESO` es el retardo a aplicar a cada operación de lectura o escritura de página antes de confirmarla. El `RETARDO_COMPACTACION` es el tiempo a esperar para simular la complejidad relativa del proceso de compactación.
 
 [^9] Se recomienda al alumno investigar sobre la utilización del comando `dd` para crear los archivos
 
