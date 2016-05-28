@@ -61,19 +61,21 @@ La llamada al sistema `io` recibirá _dos_ parámetros.
 
 ### Impresión en pantalla
 
-Existen dos formas de impresión. `textPrint` seguido de una cadena imprimirá la cadena tal cual aparece en el código fuente. La palabra reservada `print` será utilizada para mostrar el nombre y valor de la variable que reciba como parámetro.
+Existen dos formas de impresión. `textPrint` seguido de una cadena imprimirá la cadena tal cual aparece en el código fuente. La palabra reservada `print` será utilizada para mostrar el valor de la variable que reciba como parámetro.
 
 La información deberá ser mostrada en la terminal del programa y registrada en el log del sistema.
 
 #### Ejemplo:
 ```
 a = 0
+textPrint La variable a vale
 print a
 ```
 
 #### Resultado:
 ```
-VARIABLE a: 0
+La variable a vale
+0
 ```
 
 ### Funciones
@@ -109,11 +111,11 @@ end
 Lo que se ve por pantalla sería (Nótese la localidad/scope de las variables):
 
 ```
-VARIABLE a: 20
-VARIABLE b: 16
-VARIABLE a: 2
-VARIABLE b: 18
-VARIABLE a: 20
+20
+16
+2
+18
+20
 ```
 
 [^15] Llamamos "variables compartidas" a aquellas manejadas por el Núcleo, de las que todos los CPUs tiene acceso. No son "variables globales" ya que "global" refiere al scope/contexto de cada programa. No existen en AnSISOP las variables globales.
