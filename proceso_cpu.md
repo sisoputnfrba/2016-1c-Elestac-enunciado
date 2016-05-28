@@ -6,7 +6,7 @@ Estará en permanente contacto con el Proceso UMC, tanto para obtener informaci�
 
 Al iniciar, se conectará a la UMC y obtendrá el tamaño de página a utilizar. Además se conectará al proceso Núcleo y quedará a la espera de que este le envíe el PCB de un Programa AnSISOP para ejecutarlo.
 
-Incrementará el valor del registro Program Counter del PCB y utilizará el índice de código para solicitar a la UMC la(s) página(s) donde se encuentre la próxima sentencia a ejecutar. Al recibirla(s), extraerá la instrucción, la parseará, ejecutará las operaciones requeridas, actualizará los valores del Programa en la UMC, actualizará el Program Counter en el PCB y notificará al Núcleo que concluyó un **quantum**[^14].
+Incrementará el valor del registro Program Counter del PCB y utilizará el índice de código para solicitar a la UMC la porción de memoria en que se encuentre la próxima sentencia a ejecutar. Al recibirla, parseará la instrucción, ejecutará las operaciones requeridas, actualizará los valores del Programa en la UMC, actualizará el Program Counter en el PCB y notificará al Núcleo que concluyó un **quantum**[^14].
 
 ### Ejemplo
 
