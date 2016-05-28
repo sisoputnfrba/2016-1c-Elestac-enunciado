@@ -82,7 +82,7 @@ t_puntero_instruccion irAlLabel(t_nombre_etiqueta etiqueta)
 
 ### 8. `llamarConRetorno`
 
-Preserva el contexto de ejecución actual para poder retornar luego al mismo, junto con la posición de la variable entregada por `donde_retornar`. Modifica las estructuras correspondientes para mostrar un nuevo contexto vacío. Retorna el número de instrucción a ejecutar.
+Preserva el contexto de ejecución actual para poder retornar luego al mismo, junto con la posición de la variable entregada por `donde_retornar`. Modifica las estructuras correspondientes para mostrar un nuevo contexto vacío, actualizando el Program Counter según corresponda.
 
 Los parámetros serán definidos luego de esta instrucción de la misma manera que una variable local, con identificadores numéricos empezando por el 0.
 
