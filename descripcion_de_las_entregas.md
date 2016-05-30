@@ -80,7 +80,7 @@ Para permitir una mejor distribución de las tareas y orientar al alumno en el p
 **Objetivos:**
 - Finalizar las primitivas del CPU y permitir la ejecución de programas AnSISOP en su especificación completa
 - Implementar el algoritmo Clock Modificado en la UMC
-- Dar soporte a las instrucciones de semáforo con su correspondiente hilo de bloqueo y a las variables de memoria compartida
+- Dar soporte a las instrucciones de semáforo y a las variables de memoria compartida
 - Realizar pruebas de stress sobre el sistema, ejecutando varios Programas AnSISOP de manera simultánea e interrumpiendo su ejecución 
 
 **Distribución recomendada:**
