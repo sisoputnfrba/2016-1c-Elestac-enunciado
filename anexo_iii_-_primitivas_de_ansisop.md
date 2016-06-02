@@ -74,10 +74,10 @@ t_valor_variable asignarValorCompartida(t_nombre_compartida variable, t_valor_va
 
 ### 7. `irAlLabel`
 
-Devuelve el número de la primer instrucción ejecutable de etiqueta y -1 en caso de error.
+Cambia la linea de ejecucion a la correspondiente de la etiqueta buscada.
 
 ```
-t_puntero_instruccion irAlLabel(t_nombre_etiqueta etiqueta)
+void irAlLabel(t_nombre_etiqueta etiqueta)
 ```
 
 ### 8. `llamarConRetorno`
