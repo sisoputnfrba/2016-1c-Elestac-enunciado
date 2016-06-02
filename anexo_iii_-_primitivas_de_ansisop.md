@@ -129,7 +129,7 @@ int entradaSalida(t_nombre_dispositivo dispositivo, int tiempo)
 Informa al Núcleo que ejecute la función wait para el semáforo con el nombre `identificador_semaforo`. El Núcleo deberá decidir si bloquearlo o no.
 
 ```
-int wait(t_nombre_semaforo identificador_semaforo)
+void wait(t_nombre_semaforo identificador_semaforo)
 ```
 
 ### 14. `signal`
@@ -137,5 +137,5 @@ int wait(t_nombre_semaforo identificador_semaforo)
 Comunica al Núcleo que ejecute la función signal para el semáforo con el nombre `identificador_semaforo`. El Núcleo decidirá si esto conlleva desbloquear a otros procesos.
 
 ```
-int signal(t_nombre_semaforo identificador_semaforo)
+void signal(t_nombre_semaforo identificador_semaforo)
 ```
