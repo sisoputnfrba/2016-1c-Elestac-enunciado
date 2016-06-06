@@ -97,7 +97,7 @@ void llamarConRetorno(t_nombre_etiqueta etiqueta, t_puntero donde_retornar)
 Modifica el Contexto de Ejecución Actual por el Contexto anterior al que se está ejecutando, recuperando el Cursor de Contexto Actual, el Program Counter y la dirección donde retornar, asignando el valor de retorno en esta, previamente apilados en el Stack.
 
 ```
-t_puntero_instruccion retornar(t_valor_variable retorno)
+void retornar(t_valor_variable retorno)
 ```
 
 ### 10. `imprimir`
