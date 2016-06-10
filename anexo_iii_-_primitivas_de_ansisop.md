@@ -121,7 +121,7 @@ int imprimirTexto(char* texto)
 Informa al Núcleo que el Programa actual pretende utilizar el `dispositivo` durante `tiempo` unidades de tiempo.
 
 ```
-int entradaSalida(t_nombre_dispositivo dispositivo, int tiempo)
+void entradaSalida(t_nombre_dispositivo dispositivo, int tiempo)
 ```
 
 ### 13. `wait`
