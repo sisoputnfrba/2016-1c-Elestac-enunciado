@@ -29,7 +29,7 @@ El valor de la variable queda indefinido: no deberá inicializarlo con ningún v
 Esta función se invoca una vez por variable, a pesar de que este varias veces en una línea. Por ejemplo, evaluar `variables a, b, c` llamará tres veces a esta función con los parámetros `a`, `b` y `c`.
 
 ```
-t_posicion definirVariable(t_nombre_variable identificador_variable);
+t_puntero definirVariable(t_nombre_variable identificador_variable);
 ```
 
 ### 2. `obtenerPosicionVariable`
@@ -37,7 +37,7 @@ t_posicion definirVariable(t_nombre_variable identificador_variable);
 Devuelve el desplazamiento respecto al inicio del segmento Stack en que se encuentra el valor de la variable `identificador_variable` del contexto actual. En caso de error, retorna -1.
 
 ```
-t_posicion obtenerPosicionVariable(t_nombre_variable identificador_variable);
+t_puntero obtenerPosicionVariable(t_nombre_variable identificador_variable);
 ```
 
 ### 3. `dereferenciar`
@@ -45,7 +45,7 @@ t_posicion obtenerPosicionVariable(t_nombre_variable identificador_variable);
 Obtiene el valor resultante de leer a partir de `direccion_variable`, sin importar cual fuera el contexto actual.
 
 ```
-t_valor_variable dereferenciar(t_posicion direccion_variable);
+t_valor_variable dereferenciar(t_puntero direccion_variable);
 ```
 
 ### 4. `asignar`
@@ -53,7 +53,7 @@ t_valor_variable dereferenciar(t_posicion direccion_variable);
 Copia un valor en la variable ubicada en `direccion_variable`.
 
 ```
-void asignar(t_posicion direccion_variable, t_valor_variable valor)
+void asignar(t_puntero direccion_variable, t_valor_variable valor)
 ```
 
 ### 5. `obtenerValorCompartida`
@@ -105,7 +105,7 @@ void retornar(t_valor_variable retorno)
 Envía al Núcleo el contenido de `valor_mostrar`, para que este le reenvíe a la correspondiente consola del Programa en ejecución. Devuelve la cantidad de caracteres impresos.
 
 ```
-int imprimir(t_valor_variable valor_mostrar)
+void imprimir(t_valor_variable valor_mostrar)
 ```
 
 ### 11. `imprimirTexto`
@@ -113,7 +113,7 @@ int imprimir(t_valor_variable valor_mostrar)
 Envía al Núcleo una cadena de `texto` para que este la reenvíe a la correspondiente consola del Programa en ejecución. No admite parámetros adicionales, secuencias de escape o variables. Devuelve la cantidad de caracteres impresos.
 
 ```
-int imprimirTexto(char* texto)
+void imprimirTexto(char* texto)
 ```
 
 ### 12. `entradaSalida`
